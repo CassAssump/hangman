@@ -99,11 +99,11 @@ while not game_over:
             display += letter
         else:
             display += "_"
-    
+    print(stages[life])
     if not correct_guess:
         life -= 1
         print(f'Errou! Vidas restantes: {life * " ❤️"}')
-
+    
     print(display)
     if '_' not in display:
         game_over = True
@@ -113,4 +113,4 @@ while not game_over:
         print('Você perdeu.')
         print(f'A palavra era: {chosen_word}!')
 
-    print(stages[life])
+
