@@ -1,23 +1,30 @@
 import random
 from stagesart import stages
-
+from stagesart import logo
 
 with open('wordlist_pt.txt', 'r') as file:
     wordlist = file.read().splitlines() 
-
+life = 6
 print ('')
 chosen_word = random.choice(wordlist)
-
+print (logo)
 placeholder = ''
 for position in range(len(chosen_word)):
     placeholder += '_'
+    
 print(placeholder)
 
-life = 6
+
+
 correct_letters = []
 game_over = False
 
+
+
+
+print(stages[life])
 while not game_over:
+    print ('')
     guess = input('Digite uma letra: ').lower()
     display = ''
     correct_guess = False
